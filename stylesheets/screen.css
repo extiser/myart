@@ -2468,3 +2468,21 @@ center {
 .label--custom2 {
   background: url('../images/label-custom2.png') no-repeat center;
 }
+
+.cost-sale {
+  position: relative;
+}
+
+.cost-sale sup {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+.cost-sale__strikeout {
+  font-size: 10px;
+  color: rgba(0,0,0,.5);
+  line-height: 0;
+  margin-bottom: 5px;
+  text-decoration: line-through;
+}
