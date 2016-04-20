@@ -1,0 +1,57 @@
+body {
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.clearfix {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.printer {
+  background: url(../images/print/print.png);
+  width: 166px;
+  height: 36px;
+  display: block;
+  margin: -6px 0 0 0;
+}
+
+.top {
+  border-bottom: 1px solid #d6ecf1;
+  padding: 15px 0;
+}
+.top img {
+  float: left;
+}
+.top .printer {
+  float: right;
+}
+
+.content .back a {
+  color: #0096b9;
+  text-decoration: none;
+}
+.content .back a:after {
+  content: " " attr(href) "";
+  text-decoration: underline;
+  color: #ea636a;
+}
+.content .date {
+  font-weight: bold;
+  color: #ea636a;
+}
+.content img {
+  display: block;
+  margin: auto;
+}
+
+.footer {
+  padding: 15px 0;
+}
+.footer .printer {
+  float: none;
+}

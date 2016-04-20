@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+		<link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<script type="text/javascript" src="javascript/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="javascript/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+        	$(".mask, .modal").css('display', 'none');
+            $(".call").click(function() {
+                $(".mask, .close").click(function() {
+                    $(".mask, .modal").fadeOut('slow');
+                });
+                $(".mask, .modal").fadeIn('slow');
+            });
+        });
+    </script>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+	<title>MyArt.lv</title>
+</head>
+
+<body>
+<div class="mask"></div>
+	<div class="top">
+		<div class="wrapper">
+			<a class="logo lv" href="#"></a>
+
+			<div class="topest">
+				<div class="language">
+					<a href="#" class="active">RU</a> | <a href="#">LV</a>
+				</div>
+
+				<div class="search">
+					<form action="index_submit" method="get" accept-charset="utf-8">
+						<input type="text" name="" value="" placeholder="Поиск по сайту">
+						<input type="submit" name="" value="Найти">
+					</form>
+				</div>
+
+				<div class="phone">
+					<div><span>(371)</span> 271 67 970 <sub>(Rus)</sub></div>
+					<div><span>(371)</span> 271 67 970 <sub>(Lv)</sub></div>
+				</div>
+
+				<a class="call" href="#">Не смогли дозвониться?</a>
+
+				<ul class="menu">
+					<li class="menu-catalog"><a href="#">Каталог</a></li>
+					<li class="menu-articles"><a href="#">Статьи</a></li>
+					<li class="menu-dostavka"><a href="#">Доставка и оплата</a></li>
+					<li class="menu-contact"><a href="#">Контакты</a></li>
+				</ul>
+
+				<div class="basket empty">
+		            <span class="icon"></span>
+		            <p>
+		                В корзине
+		                <span>товаров нет</span>
+		            </p>
+				</div>
+
+				<a href="#" class="btn">Оформить заказ</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	<div class="wrapper">
+		<div class="sidebar">
+			<div class="inner">
+				<div class="cat-title green">
+					Магазин
+				</div>
+
+				<ul>
+					<li class="red"><a href="#">Распродажа</a></li>
+					<li><a href="#">Блокноты</a></li>
+					<li><a href="#">Открытки</a>
+						<ul>
+							<li><a href="#">c 8 марта</a></li>
+							<li><a href="#">с 23 февраля</a></li>
+							<li><a href="#">с Днем Св.Валентина</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Приглашения</a></li>
+					<li><a href="#">Альбомы</a></li>
+				</ul>
+
+				<div class="cat-title pink">
+					Готовые работы
+				</div>
+
+				<ul>
+					<li class="red"><a href="#">Распродажа</a></li>
+					<li><a href="#">Блокноты</a></li>
+					<li><a href="#">Открытки</a>
+						<ul>
+							<li><a href="#">c 8 марта</a></li>
+							<li><a href="#">с 23 февраля</a></li>
+							<li><a href="#">с Днем Св.Валентина</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Приглашения</a></li>
+					<li><a href="#">Альбомы</a></li>
+				</ul>
+		
+				<div class="sidebar-bottom"></div>
+				<div class="sidebar-border"></div>
+			</div>
+			
+		</div>
+
+		<div class="content">
+			<div class="new">
+				<div class="title">Новинки</div>
+
+				<div class="block">
+					<div class="label label--new"></div>
+					<span class="image">
+						<div class="corner lt"></div>
+						<div class="corner rt"></div>
+						<div class="corner rd"></div>
+						<div class="corner ld"></div>
+						<img src="images/temp/image.png" alt="">
+						<div class="cost">
+							15<sup>€</sup>
+						</div>
+					</span>
+					<a class="cat" href="#">Мамины сокровища</a>
+					<div class="rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+            			<span id="rating-7">
+						<span class="star-rating-control">
+							<div class="rating-cancel"><a title="Cancel Rating"></a></div>
+
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_0">
+								<a title="1">1</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_1">
+								<a title="2">2</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_2">
+								<a title="3">3</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live" id="rating-7_3">
+								<a title="4">4</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live" id="rating-7_4">
+								<a title="5">5</a>
+							</div>
+						</span>
+						<input id="rating-7_0" value="1" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_1" value="2" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_2" value="3" checked="checked" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_3" value="4" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_4" value="5" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						</span>            
+						<meta itemprop="worstRating" content="1">
+        			</div>
+
+					<a href="#">Приглашение "Георгин" с калькой сделано из цветного картона</a>
+				</div>
+
+				<div class="block">
+					<div class="label label--custom"></div>
+					<span class="image">
+						<div class="corner lt"></div>
+						<div class="corner rt"></div>
+						<div class="corner rd"></div>
+						<div class="corner ld"></div>
+						<img src="images/temp/image.png" alt="">
+						<div class="cost">
+							15<sup>€</sup>
+						</div>
+					</span>
+					<a class="cat" href="#">Мамины сокровища</a>
+					<div class="rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+            			<span id="rating-7">
+						<span class="star-rating-control">
+							<div class="rating-cancel"><a title="Cancel Rating"></a></div>
+
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_0">
+								<a title="1">1</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_1">
+								<a title="2">2</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_2">
+								<a title="3">3</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live" id="rating-7_3">
+								<a title="4">4</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live" id="rating-7_4">
+								<a title="5">5</a>
+							</div>
+						</span>
+						<input id="rating-7_0" value="1" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_1" value="2" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_2" value="3" checked="checked" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_3" value="4" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_4" value="5" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						</span>            
+						<meta itemprop="worstRating" content="1">
+        			</div>
+
+					<a href="#">Приглашение "Георгин" с калькой сделано из цветного картона</a>
+				</div>
+
+				<div class="block">
+					<div class="label label--custom2"></div>
+					<span class="image">
+						<div class="corner lt"></div>
+						<div class="corner rt"></div>
+						<div class="corner rd"></div>
+						<div class="corner ld"></div>
+						<img src="images/temp/image.png" alt="">
+						<div class="cost">
+							15<sup>€</sup>
+						</div>
+					</span>
+					<a class="cat" href="#">Мамины сокровища</a>
+					<div class="rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+            			<span id="rating-7">
+						<span class="star-rating-control">
+							<div class="rating-cancel"><a title="Cancel Rating"></a></div>
+
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_0">
+								<a title="1">1</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_1">
+								<a title="2">2</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_2">
+								<a title="3">3</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live" id="rating-7_3">
+								<a title="4">4</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live" id="rating-7_4">
+								<a title="5">5</a>
+							</div>
+						</span>
+						<input id="rating-7_0" value="1" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_1" value="2" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_2" value="3" checked="checked" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_3" value="4" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_4" value="5" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						</span>            
+						<meta itemprop="worstRating" content="1">
+        			</div>
+
+					<a href="#">Приглашение "Георгин" с калькой сделано из цветного картона</a>
+				</div>
+
+				<div class="block">
+					<span class="image">
+						<div class="corner lt"></div>
+						<div class="corner rt"></div>
+						<div class="corner rd"></div>
+						<div class="corner ld"></div>
+						<img src="images/temp/image.png" alt="">
+						<div class="cost">
+							15<sup>€</sup>
+						</div>
+					</span>
+					<a class="cat" href="#">Мамины сокровища</a>
+					<div class="rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+            			<span id="rating-7">
+						<span class="star-rating-control">
+							<div class="rating-cancel"><a title="Cancel Rating"></a></div>
+
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_0">
+								<a title="1">1</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_1">
+								<a title="2">2</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_2">
+								<a title="3">3</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live" id="rating-7_3">
+								<a title="4">4</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live" id="rating-7_4">
+								<a title="5">5</a>
+							</div>
+						</span>
+						<input id="rating-7_0" value="1" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_1" value="2" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_2" value="3" checked="checked" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_3" value="4" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_4" value="5" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						</span>            
+						<meta itemprop="worstRating" content="1">
+        			</div>
+
+					<a href="#">Приглашение "Георгин" с калькой сделано из цветного картона</a>
+				</div>
+
+				<div class="block">
+					<span class="image">
+						<div class="corner lt"></div>
+						<div class="corner rt"></div>
+						<div class="corner rd"></div>
+						<div class="corner ld"></div>
+						<img src="images/temp/image.png" alt="">
+						<div class="cost">
+							15<sup>€</sup>
+						</div>
+					</span>
+					<a class="cat" href="#">Мамины сокровища</a>
+					<div class="rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+            			<span id="rating-7">
+						<span class="star-rating-control">
+							<div class="rating-cancel"><a title="Cancel Rating"></a></div>
+
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_0">
+								<a title="1">1</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_1">
+								<a title="2">2</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_2">
+								<a title="3">3</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live" id="rating-7_3">
+								<a title="4">4</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live" id="rating-7_4">
+								<a title="5">5</a>
+							</div>
+						</span>
+						<input id="rating-7_0" value="1" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_1" value="2" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_2" value="3" checked="checked" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_3" value="4" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_4" value="5" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						</span>            
+						<meta itemprop="worstRating" content="1">
+        			</div>
+
+					<a href="#">Приглашение "Георгин" с калькой сделано из цветного картона</a>
+				</div>
+
+				<div class="block">
+					<span class="image">
+						<div class="corner lt"></div>
+						<div class="corner rt"></div>
+						<div class="corner rd"></div>
+						<div class="corner ld"></div>
+						<img src="images/temp/image.png" alt="">
+						<div class="cost">
+							15<sup>€</sup>
+						</div>
+					</span>
+					<a class="cat" href="#">Мамины сокровища</a>
+					<div class="rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+            			<span id="rating-7">
+						<span class="star-rating-control">
+							<div class="rating-cancel"><a title="Cancel Rating"></a></div>
+
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_0">
+								<a title="1">1</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_1">
+								<a title="2">2</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live star-rating-on" id="rating-7_2">
+								<a title="3">3</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live" id="rating-7_3">
+								<a title="4">4</a>
+							</div>
+							<div role="text" aria-label="" class="star-rating rater-0 star-rating-applied star-rating-live" id="rating-7_4">
+								<a title="5">5</a>
+							</div>
+						</span>
+						<input id="rating-7_0" value="1" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_1" value="2" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_2" value="3" checked="checked" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_3" value="4" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						<input id="rating-7_4" value="5" type="radio" name="rating-7" class="star-rating-applied" style="display: none;">
+						</span>            
+						<meta itemprop="worstRating" content="1">
+        			</div>
+
+					<a href="#">Приглашение "Георгин" с калькой сделано из цветного картона</a>
+				</div>
+			</div>
+
+			<div class="master">
+				<div class="title">Мастеркласс <a href="#">Все статьи</a></div>
+				
+				<ul>
+					<li>
+						<img src="images/temp/image2.png" alt="">
+						<a href="#">Приглашение "Георгин" с калькой сделано из цветного картона</a>
+					</li>
+					<li>
+						<img src="images/temp/image2.png" alt="">
+						<a href="#">Приглашение "Георгин" с калькой сделано из цветного картона</a>
+					</li>
+					<li>
+						<img src="images/temp/image2.png" alt="">
+						<a href="#">Приглашение "Георгин" с калькой сделано из цветного картона</a>
+					</li>
+					<li>
+						<img src="images/temp/image2.png" alt="">
+						<a href="#">Приглашение "Георгин" с калькой сделано из цветного картона</a>
+					</li>
+					<li>
+						<img src="images/temp/image2.png" alt="">
+						<a href="#">Приглашение "Георгин" с калькой сделано из цветного картона</a>
+					</li>
+					<div class="clearfix"></div>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	<div class="footer">
+		<div class="wrapper">
+			<a class="logo-footer lv"></a>
+
+			<div class="social">
+				<a href="#" class="facebook"></a>
+				<a href="#" class="livejournal"></a>
+				<a href="#" class="instagramm"></a>
+			</div>
+
+			<div class="menu-footer">
+				<a href="#">Каталог</a>            
+				<a href="#">Статьи</a> 
+				<a href="#">Доставка и оплата</a> 
+				<a href="#">Контакты</a> 
+			</div>
+
+			<div class="phone">
+				<div><span>(371)</span> 271 67 970 <sub>(Rus)</sub></div>
+				<div><span>(371)</span> 271 67 970 <sub>(Lv)</sub></div>
+
+				<a href="#" class="mail">hello@yagoodza.ru</a>
+				<a href="#" class="skype">skype</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div class="modal">
+		<span class="close"></span>
+		<div class="title">Закажите обратный звонок</div>
+		<form action="MyArt4_main_submit" method="get" accept-charset="utf-8">
+		<div class="element-group error">
+			<label>
+				Ваше имя
+				<input type="text" name="" value="" placeholder="">
+				<div class="errorMessage" id="CallbackForm_name_em_">Необходимо заполнить поле «Имя».</div>
+			</label>
+		</div>
+			<label>
+				Номер телефона
+				<input type="text" name="" value="" placeholder="">
+				<div class="errorMessage" id="CallbackForm_name_em_">Необходимо заполнить поле «Телефон».</div>
+			</label>
+			<label>
+				Удобное время звонка
+				<span class="selects">
+					<select name="">
+						<option>9:00</option>
+					</select>
+					-
+					<select name="">
+						<option>18:00</option>
+					</select>
+				</span>
+			</label>
+			<label class="lang">На каком языке вам удобнее общаться?</label>
+			<label>
+				<input type="radio"> <span class="ru">Русский</span>
+				<input type="radio"> <span class="lv">Латышский</span>
+			</label>
+			<input type="submit" name="" value="Подтвердить">
+		</form>
+	</div>
+</body>
+</html>

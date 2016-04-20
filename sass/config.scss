@@ -1,0 +1,403 @@
+.wrapper {
+	width: 1240px; 
+	margin: auto;
+	@media screen and (max-width:767px) {
+	    max-width: 767px;
+	    width: 100%;
+	}
+	@media screen and (max-width:480px) {
+	    max-width: 480px;
+	    width: 100%;
+	}
+}
+// sprites
+$icons: sprite-map("icons/*.png", $spacing: 100px, $icons-sprite-dimensions: true);
+
+$border: 1px solid;
+.clearfix {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body {
+	font: {
+		family: Arial;
+		size: 16px;
+	}
+	color: #000;
+	line-height: 18px;
+	background: url(../images/body.png) repeat;
+}
+
+.hide {
+	display: none!important;
+}
+
+a {
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+	color: #0096b9;
+}
+
+input:focus, select:focus, textarea:focus {
+	outline: none;
+}
+
+@mixin background ($url, $position) {
+	background: {
+		image: sprite-url($icons);
+		repeat: no-repeat;
+		position: sprite-position($icons, $url, $position);
+	}
+}
+
+@mixin title {
+	font-size: 27px;
+	color: #000;
+	padding: 6px 0 8px 30px;
+	margin: 0 0 20px 0;
+	@media screen and (max-width:767px) {
+	    background: none!important;
+	    padding: 0;
+	}
+	@media screen and (max-width:480px) {
+	    background: none!important;
+	    padding: 0;
+	}
+}
+
+@mixin phone {
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	margin: -3px 0 0 116px;
+	span {
+		color: #ea636a;
+	}
+	sub {
+		font-size: 12px;
+		font-weight: normal;
+		color: #82a3a9;
+	}
+	@media screen and (max-width:767px) {
+	    max-width: 767px;
+	    width: 100%;
+	    float: none;
+	    text-align: center;
+	    margin: 20px 0 0 0;
+	}
+	@media screen and (max-width:480px) {
+	    max-width: 480px;
+	    width: 100%;
+	    float: none;
+	    text-align: center;
+	    margin: 20px 0 0 0;
+	}
+}
+
+@mixin image {
+	display: block;
+	text-align: center;
+	border: 5px solid #fff;
+	background: #fff;
+	position: relative;
+	@include box-shadow(#dee1e2 0 0 5px);
+		.corner {
+			position: absolute;
+		}
+		.lt {
+			@include background(corner-lt, 0);
+			@include sprite-dimensions($icons, corner-lt);
+			left: -7px;
+			top: -7px;
+		}
+		.rt {
+			@include background(corner-rt, 0);
+			@include sprite-dimensions($icons, corner-rt);
+			right: -7px;
+			top: -7px;
+		}
+		.ld {
+			@include background(corner-ld, 0);
+			@include sprite-dimensions($icons, corner-ld);
+			left: -7px;
+			bottom: -7px;
+		}
+		.rd {
+			@include background(corner-rd, 0);
+			@include sprite-dimensions($icons, corner-rd);
+			right: -7px;
+			bottom: -7px;
+		}
+	img {
+		width: auto;
+		height: 180px;
+	}
+}
+
+@mixin input {
+	border: $border #d9f1f6;
+	border-top: 2px solid #d9f1f6;
+	color: #5d8a93;
+}
+
+@mixin submit {
+	font-size: 18px;
+	color: #3b7e6d;
+	padding: 6px 26px;
+	border: $border #79beac;
+	background-color: #abe1d3;
+	outline: #e3eef0;
+	@include border-radius(15px);
+}
+
+@mixin h2 {
+	font-size: 19px;
+	color: #ea636a;
+	margin: 15px 0;
+}
+
+.error {
+	input {
+		border: $border #ecd9d9!important;
+		@include background(error, 0);
+		@include sprite-background-position($icons, error, +300, +15);
+		background-color: #fff8f8;
+	}
+}
+
+@mixin errorMessage {
+	width: 200px;
+	position: absolute;
+	left: 325px;
+	text-align: center;
+	background-color: #fff;
+	top: 19px;
+	padding: 15px;
+	@include border-radius(8px);
+	@include box-shadow(#cfcfcf 0 0 9px);
+	color: #d16565;
+	font-weight: bold;
+	font-size: 12px;
+	&:before {
+		position: absolute;
+		content: "";
+		@include background(arr-validate, 0);
+		@include sprite-dimensions($icons, arr-validate);
+		left: -11px;
+		top: 8px;
+	}
+}
+
+@mixin form {
+	.center {
+    	@include border-radius(25px);
+		padding: 10px 34px;
+		@include box-shadow(#eef3f4 0 0 3px);
+		border: 6px solid #fff;
+		box-shadow: 0px 0px 0px 1px #e2edf0 inset;
+		box-sizing: border-box;
+		background: #fff url(../images/form.png) no-repeat 630px 75px;
+		    .left {
+		    	position: relative;
+		    	float: left;
+		    	margin: 0 25px 0 0;
+				.errorMessage {
+					@include errorMessage;
+					z-index: 999;
+					left: 260px;
+					top: 31px;
+				}
+				.error {
+					input {
+						@include sprite-background-position($icons, error, +240, +10);
+					}
+				}
+		    }
+		    .right {
+		    	@extend .left;
+		    	margin: 0;
+		    }
+		    label {
+		    	display: block;
+		    	margin: 15px 0 5px 0;
+		    }
+		    input[type=text], textarea, input[type=email] {
+		    	width: 240px;
+		    	padding: 7px 10px;
+		    	@include input;
+		    }
+		    textarea {
+		    	display: block;
+		    	width: 530px;
+		    	height: 60px;
+		    }
+		    select {
+		    	display: block;
+		    	width: 550px;
+		    	padding: 7px 10px;
+		    	@include input;
+		    	background: #fff;
+		    }
+		    input[type=submit] {
+		    	display: block;
+		    	@include submit;
+		    	margin: 15px 0 20px 0;
+		    }
+		    &.code {
+		    	background: #fff;
+		    }
+    	}
+}
+
+@mixin table {
+	.table {
+		display: table;
+		border-collapse: collapse;
+	}
+	.table-caption {
+        display: table-row;
+        div {
+        	vertical-align: middle;
+        	display: table-cell;
+            text-align: center;
+            padding: 7px 0; 
+            font-size: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #ed616c;
+            &.name {
+            	width: 592px;
+                text-align: left;
+            }
+            &.counts {
+            	width: 152px;
+            }
+            &.amount {
+            	width: 185px;
+            }
+            &.del {
+            	width: 41px;
+            }
+        }
+    }
+    .tovar {
+    	display: table-row;
+    	border-bottom: $border #d6ecf1;
+
+    	> div {
+    		vertical-align: middle;
+        	display: table-cell;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 15px;
+    		&.name {
+    			.image {
+    				@include image;
+    				width: 137px;
+    				height: 99px;
+    				float: left;
+    				margin: 0 25px 0 0;
+    				img {
+    					width: auto!important;
+    					height: auto!important;
+    				}
+    			}
+    			.info {
+    				width: 250px;
+    				font-size: 16px;
+    				text-align: left;
+    				float: left;
+    				margin: 15px 0 0 0;
+    				.cost {
+    					margin: 10px 0 0 0;
+    					font-size: 25px;
+						sup {
+							font-size: 15px;
+							color: #ed616c;
+							vertical-align: top;
+							display: inline-block;
+							margin: -4px 0 0 3px;
+							font-weight: bold;
+						}
+    				}
+    				@media screen and (max-width:767px) {
+					    width: 137px;
+					}
+					@media screen and (max-width:480px) {
+					    width: 137px;
+					}
+    			}
+    		}
+    		&.counts {
+    			input {
+    				width: 30px;
+    				font-size: 14px;
+    				@include input;
+    				padding: 5px 8px;
+    			}
+    		}
+    		&.amount {
+    			.cost {
+    				margin: 10px 0 0 0;
+    				font-size: 25px;
+					sup {
+						font-size: 15px;
+						color: #ed616c;
+						vertical-align: top;
+						display: inline-block;
+						margin: -4px 0 0 3px;
+						font-weight: bold;
+					}
+    			}
+    		}
+    		&.del {
+    			a {
+    				display: block;
+    				@include background(del, 0);
+    				@include sprite-dimensions($icons, del);
+    				margin: 7px 0 0 0;
+    			}
+    		}
+    	}
+    }
+    .total {
+    	display: block;
+    	padding: 15px 110px 15px 0;
+    	text-align: right;
+    	font-size: 24px;
+    	color: #516d72;
+    	.cost {
+    		display: inline-block;
+    		margin: 10px 0 0 0;
+    		font-size: 25px;
+    		color: #000!important;
+			sup {
+				font-size: 15px;
+				color: #ed616c;
+				vertical-align: top;
+				display: inline-block;
+				margin: -4px 0 0 3px;
+				font-weight: bold;
+			}
+    	}
+    }
+}
+
+// корзина 
+.basketcontroller-index {
+	@media screen and (max-width:767px) {
+		.sidebar, ._basketbuttonAjaxBlock, .menu {
+			display: none;
+		}
+	}
+	@media screen and (max-width:480px) {
+		.sidebar, ._basketbuttonAjaxBlock, .menu {
+			display: none;
+		}
+	}
+}

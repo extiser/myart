@@ -1,0 +1,84 @@
+/*
+Error: Undefined mixin 'sprite-background-position'.
+        on line 169 of C:/Dropbox/Sites/myart/sass/config.scss, in `sprite-background-position'
+        from line 169 of C:/Dropbox/Sites/myart/sass/config.scss
+
+164: 
+165: .error {
+166: 	input {
+167: 		border: $border #ecd9d9!important;
+168: 		@include background(error, 0);
+169: 		@include sprite-background-position($icons, error, +300, +15);
+170: 		background-color: #fff8f8;
+171: 	}
+172: }
+173: 
+174: @mixin errorMessage {
+
+Backtrace:
+C:/Dropbox/Sites/myart/sass/config.scss:169:in `sprite-background-position'
+C:/Dropbox/Sites/myart/sass/config.scss:169
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:338:in `block in visit_mixin'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:98:in `with_mixin'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:420:in `map'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:420:in `map'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/root_node.rb:20:in `render'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/engine.rb:268:in `render'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:491:in `update_stylesheet'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:469:in `on_file_changed'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:328:in `block in watch'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/listen-1.3.1/lib/listen/listener.rb:252:in `call'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/listen-1.3.1/lib/listen/listener.rb:252:in `on_change'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/listen-1.3.1/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/listen-1.3.1/lib/listen/adapters/polling.rb:48:in `call'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/listen-1.3.1/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Program Files/Ruby2/lib/ruby/gems/2.0.0/gems/listen-1.3.1/lib/listen/adapter.rb:297:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'sprite-background-position'.\A         on line 169 of C:/Dropbox/Sites/myart/sass/config.scss, in `sprite-background-position'\A         from line 169 of C:/Dropbox/Sites/myart/sass/config.scss\A \A 164: \A 165: .error {\A 166: 	input {\A 167: 		border: $border #ecd9d9!important;\A 168: 		@include background(error, 0);\A 169: 		@include sprite-background-position($icons, error, +300, +15);\A 170: 		background-color: #fff8f8;\A 171: 	}\A 172: }\A 173: \A 174: @mixin errorMessage {"; }

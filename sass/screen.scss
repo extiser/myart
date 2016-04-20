@@ -1,0 +1,1429 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+@import "config.scss";
+
+.top {
+	width: 100%;
+	height: 138px;
+	@include background(top, 50%);
+	margin: 2px 0 40px 0;
+	.logo {
+		display: block;
+		@include background(logo, 0);
+		@include sprite-dimensions($icons, logo);
+		float: left;
+		&.lv {
+			@include background(logo-lv, 0);
+		}
+		@media screen and (max-width:767px) {
+		    float: none;
+		    margin: auto;
+		}
+		@media screen and (max-width:480px) {
+			float: none;
+			margin: auto;
+		}
+	}
+	.topest {
+		position: relative;
+		top: 15px;
+		@media screen and (max-width:767px) {
+			top: 5px;
+		}
+		@media screen and (max-width:480px) {
+			top: 5px;
+		}
+		.language {
+			margin: 8px 25px 0 25px;
+			float: left;
+			font-size: 13px;
+			color: #d1dcde;
+			a {
+				text-decoration: none;
+				color: #5d8a93;
+				&.active {
+					color: #ea636a;
+				}
+				&:hover {
+					text-decoration: underline;
+					color: #ea636a;
+				}
+			}
+			@media screen and (max-width:767px) {
+			    margin: -30px 0 0 10px;
+				float: none;
+			}
+			@media screen and (max-width:480px) {
+				margin: -30px 0 0 10px;
+				float: none;
+			}
+		}
+		.search {
+			float: left;
+			position: relative;
+			input[type=text] {
+				width: 441px;
+				@include background(search, 0);
+				@include sprite-background-position($icons, search, +9, +7);
+				@include input;
+				padding: 6px 0 6px 31px;
+				font: {
+					style: italic;
+					size: 13px;
+				}
+				
+			}
+			input[type=submit] {
+				position: absolute;
+				background: #f1fafc;
+				border: $border #d3ebef;
+				font-size: 12px;
+				color: #7eaab3;
+				top: 4px; 
+				right: 1px;
+				padding: 3px 13px 4px;
+			}
+			@media screen and (max-width:767px) {
+			    display: none;
+			}
+			@media screen and (max-width:480px) {
+				display: none;
+			}
+		}
+		.phone {
+			@include phone;
+		}
+		.call {
+			display: block;
+			float: right;
+			width: 83px;
+			font-size: 12px;
+			color: #0096b9;
+			text-align: center;
+			margin: -4px 0 0 0;
+			@media screen and (max-width:767px) {
+			    display: none;
+			}
+			@media screen and (max-width:480px) {
+				display: none;
+			}
+		}
+		.menu {
+			float: left;
+			margin: 32px 0 0 0;
+			li {
+				display: inline-block;
+				padding: 2px 0 0 32px;
+				margin: 0 20px 0 25px;
+				a {
+					color: #3b7e6d;
+					font-size: 18px;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			.menu-catalog {
+				@include background(top-catalog, 0);
+				@include sprite-background-position($icons, top-catalog, 0, 0);
+			}
+			.menu-articles {
+				@include background(top-articles, 0);
+				@include sprite-background-position($icons, top-articles, 0, 0);
+			}
+			.menu-dostavka {
+				@include background(top-dostavka, 0);
+				@include sprite-background-position($icons, top-dostavka, 0, 0);
+				padding: 2px 0 0 25px;
+			}
+			.menu-contact {
+				@include background(top-contact, 0);
+				@include sprite-background-position($icons, top-contact, 0, +3);
+				padding: 2px 0 0 25px;
+			}
+			@media screen and (max-width:767px) {
+			    max-width: 767px;
+			    width: 100%;
+			    float: none;
+			    text-align: center;
+			    margin: 10px 0 0 0;
+			    li {
+			    	display: block;
+			    	margin: 0 0 10px 0;
+			    	padding: 0!important;
+			    	background: none!important;
+			    }
+			}
+			@media screen and (max-width:480px) {
+			    max-width: 480px;
+			    width: 100%;
+			    float: none;
+			    text-align: center;
+			    margin: 10px 0 0 0;
+			    li {
+			    	display: block;
+			    	margin: 0 0 10px 0;
+			    	padding: 0!important;
+			    	background: none!important;
+			    }
+			}
+		}
+		._basketbuttonAjaxBlock {
+			@media screen and (max-width:767px) {
+				position: fixed;
+				right: 0;
+				top: 160px;
+			}
+			@media screen and (max-width:480px) {
+				position: fixed;
+				right: 0;
+				top: 160px;
+			}
+			
+		}
+		.basket {
+			width: 160px;
+			float: left;
+			margin: 15px 0 0 0;
+			&.empty {
+				width: 220px;
+			}
+			.icon {
+				display: inline-block;
+				@include background(basket, 0);
+				@include sprite-background-position($icons, basket, +12, +12);
+				vertical-align: middle;
+				width: 56px;
+				height: 55px;
+				background-color: #fff;
+				@include opacity(0.26);
+				margin: 0 20px 0 0;
+			}
+			p {
+				display: inline-block;
+				font-size: 12px;
+				line-height: normal;
+				color: #3b7e6d;
+				position: relative;
+				top: 8px;
+				a {
+					display: block;
+					font-size: 14px;
+					font-weight: bold;
+					color: #ea636a;
+				}
+				span {
+					display: block;
+					font-size: 14px;
+					color: #000;
+				}
+			}
+			@media screen and (max-width:767px) {
+				width: 56px;
+				height: 55px;
+				overflow: hidden;
+				background-color: #ABE1D3;
+				&.empty {
+					width: 56px;
+					height: 55px;
+				}
+			}
+			@media screen and (max-width:480px) {
+				width: 56px;
+				height: 55px;
+				overflow: hidden;
+				background-color: #ABE1D3;
+				&.empty {
+					width: 56px;
+					height: 55px;
+				}
+			}
+		}
+		.btn {
+			display: block;
+			float: left;
+			background: #ed616c;
+			margin: 27px 0 0 25px;
+			text-decoration: none;
+			color: #fff;
+			font-size: 12px;
+			text-align: center;
+			padding: 6px 14px;
+			@media screen and (max-width:767px) {
+				float: none;
+				position: absolute;
+				right: 0;
+				z-index: 999;
+				font-size: 9px;
+				padding: 6px 8px;
+			}
+			@media screen and (max-width:480px) {
+				float: none;
+				position: absolute;
+				right: 0;
+				z-index: 999;
+				font-size: 9px;
+				padding: 6px 8px;
+			}
+		}
+	}
+}
+
+.sidebar {
+	width: 209px;
+	margin: 0 0 0 30px;
+	padding: 22px 0 0 0;
+	float: left;
+	&:before {
+		content: "";
+		display: block;
+		@include background(cat-top, 0);
+		@include sprite-dimensions($icons, cat-top);
+	}
+	.inner {
+		position: relative;
+		width: 209px;
+		background: url(../images/cat-inner.png) repeat-y 0 0;
+		text-align: center;
+		padding: 0 0 55px 0;
+		@include border-bottom-right-radius(15px);
+		.green {
+			color: #516d72;
+			@include background(cat-green-title, 0);
+			@include sprite-dimensions($icons, cat-green-title);
+		}
+		.pink {
+			color: #796868;
+			@include background(cat-pink-title, 0);
+			@include sprite-dimensions($icons, cat-pink-title);
+		}
+		.cat-title {
+			font-size: 18px;
+			padding: 28px 0 0 0;
+			margin: auto;
+			height: 41px;
+		}
+		> ul > li {
+			margin: auto;
+			display: block;
+			width: 176px;
+			text-align: center;
+			padding: 8px 0;
+			border-top: $border #e7f4f7;
+			&:first-child {
+				border: none;
+			}
+			> a {
+				font-size: 15px;
+				color: #516d72;
+				text-transform: uppercase;
+				text-decoration:none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			> ul > li {
+				padding: 2px 0 0 0;
+				a {
+					font-size: 12px;
+				}
+			}
+			&.red {
+				a {
+					color: #ea636a;
+				}
+			}
+		}
+		.sidebar-bottom {
+			@include background(cat-bottom, 0);
+			@include sprite-dimensions($icons, cat-bottom);
+			position: absolute;
+			bottom: -10px;
+			z-index: 1;
+		}
+		.sidebar-border {
+			@include background(cat-border, 0);
+			@include sprite-dimensions($icons, cat-border);
+			position: absolute;
+			bottom: -22px;
+		}
+	}
+	@media screen and (max-width:767px) {
+		float: none;
+		margin: 190px auto 0;
+	}
+	@media screen and (max-width:480px) {
+		float: none;
+		margin: 190px auto 0;
+	}
+}
+
+.content {
+	width: 969px;
+	float: right;
+	.new {
+		.title {
+			@include title;
+			@include background(head-green, 0);
+			span {
+				color: #dd5967;
+			}
+		}
+		.block {
+			width: 295px;
+			text-align: center;
+			display: inline-block;
+			margin: 0 25px 30px 0;
+			position: relative;
+			vertical-align: top;
+			.image {
+				@include image;
+				.cost {
+					position: absolute;
+					@include background(cost-small, 0);
+					@include sprite-dimensions($icons, cost-small);
+					font-size: 21px;
+					padding: 17px 0 0 0;
+					height: 37px;
+					left: 0;
+					right: 0;
+					bottom: -30px;
+					margin: auto;
+					sup {
+						font-size: 15px;
+						color: #ed616c;
+						vertical-align: top;
+						display: inline-block;
+						margin: -4px 0 0 -3px;
+						font-weight: bold;
+					}
+				}
+				.preorder {
+					font-size: 18px;
+				}
+			}
+			.cat {
+				display: block;
+				font: {
+					style: italic;
+					size: 12px;
+				}
+				color: #7f7f7f;
+				text-decoration: none;
+				margin: 22px 0 7px 10px;
+				text-align: left;
+			}
+			.rating {
+				display: inline-block;
+				position: absolute;
+				top: 218px;
+				right: 15px;
+				font-size: 12px;
+				color: #999;
+				.star-rating {
+					margin: -5px 1px 0 0;
+					@include background(rating-full, 0);
+					@include sprite-dimensions($icons, rating-full);
+					float: left;
+					a {
+						display: block;
+						text-indent: -9999px;
+						overflow: hidden;
+					}
+				}
+				.star-rating-on {
+					@include background(rating-none, 0);
+					cursor: pointer;
+				}
+				.star-rating-hover {
+					@extend .star-rating-on;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	@media screen and (max-width:767px) {
+	    max-width: 767px;
+	    width: 100%;
+	    float: none;
+	    margin-top: 40px;
+	    .new {
+	    	text-align: center;
+	    	.block {
+		    	margin: 0 0 30px 0;
+		    }
+	    }
+	}
+	@media screen and (max-width:480px) {
+	    max-width: 480px;
+	    width: 100%;
+	    float: none;
+	    margin-top: 40px;
+	    .new {
+	    	text-align: center;
+	    	.block {
+		    	margin: 0 0 30px 0;
+		    }
+	    }
+	}
+}
+
+.master {
+	margin: 40px 0 0 0;
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		@include background(art, 0);
+		@include sprite-dimensions($icons, art);
+		position: absolute;
+		right: 0;
+		top: 20px;
+	}
+	
+	.title {
+		@include title;
+		@include background(head-pink, 0);
+		margin: 0 0 30px 0;
+		a {
+			font-size: 14px;
+			color: #4193a6;
+			vertical-align: middle;
+		}
+	}
+	ul {
+		margin: 0 0 0 -10px;
+		li {
+			float: left;
+			width: 173px;
+			padding: 5px 10px;
+			position: relative;
+			background: #fff;
+			text-align: center;
+			border: $border #dbeeeb;
+			border-top: 0;
+			border-right: 0;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				@include background(art-white-top, 0);
+				@include sprite-dimensions($icons, art-white-top);
+				top: -15px;
+				left: -1px;
+				right: 0;
+				margin: auto;
+			}
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				@include background(art-white-bottom, 0);
+				@include sprite-dimensions($icons, art-white-bottom);
+				bottom: -15px;
+				left: -1px;
+				right: 0;
+				margin: auto;
+			}
+			&:nth-child(2n) {
+				background: #d9f4ee;
+				&:before {
+					@include background(art-green-top, 0);
+				}
+				&:after {
+					@include background(art-green-bottom, 0);
+				}
+				img {
+					border-color: #b8e3d8;
+					background: #fff;
+				}
+			}
+			img {
+				padding: 4px;
+				border: $border #dbefec;
+			}
+			a {
+				display: block;
+				margin: 10px 0;
+				font-size: 14px;
+			}
+		}
+	}
+	@media screen and (max-width:767px) {
+		margin: 0;
+		text-align: center;
+		&:after {
+			display: none;
+		}
+		.title {
+			a {
+				display: none;
+			}
+		}
+		ul {
+			margin: auto;
+			text-align: center;
+			li {
+				float: none;
+				margin: 40px auto;
+			}
+		}
+	}
+	@media screen and (max-width:480px) {
+		margin: 0;
+		text-align: center;
+		&:after {
+			display: none;
+		}
+		.title {
+			a {
+				display: none;
+			}
+		}
+		ul {
+			margin: auto;
+			text-align: center;
+			li {
+				float: none;
+				margin: 40px auto;
+			}
+		}
+	}
+}
+
+.footer {
+	width: 100%;
+	margin: 80px 0 0 0;
+	padding: 40px 0 20px;
+	position: relative;
+	background: url(../images/footer-line.png) repeat-x top center;
+	.logo-footer {
+		position: absolute;
+		top: -45px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		display: block;
+		@include background(logo-footer, 0);
+		@include sprite-dimensions($icons, logo-footer);
+		&.lv {
+			@include background(logo-footer-lv, 0);
+		}
+	}
+	.social {
+		float: left;
+		a {
+			display: inline-block;
+		}
+		.facebook {
+			@include background(facebook, 0);
+			@include sprite-dimensions($icons, facebook);
+		}
+		.livejournal {
+			@extend .facebook;
+			@include background(livejournal, 0);
+		}
+		.instagramm {
+			@extend .facebook;
+			@include background(instagramm, 0);
+		}
+		@media screen and (max-width:767px) {
+		    float: none;
+		    margin: 15px auto 10px;
+		    text-align: center;
+		}
+		@media screen and (max-width:480px) {
+		    float: none;
+		    margin: 15px auto 10px;
+		    text-align: center;
+		}
+	}
+	.menu-footer {
+		float: left;
+		margin: 25px 0 0 250px;
+		a {
+			display: inline-block;
+			margin: 0 25px 0 0;
+			font-size: 14px;
+		}
+		@media screen and (max-width:767px) {
+		    float: none;
+		    margin: auto;
+		    text-align: center;
+		    a {
+		    	display: block;
+		    	margin: 0;
+		    }
+		}
+		@media screen and (max-width:480px) {
+		    float: none;
+		    margin: auto;
+		    text-align: center;
+		    a {
+		    	display: block;
+		    	margin: 0;
+		    }
+		}
+	}
+	.phone {
+		@include phone;
+		float: right;
+		a {
+			display: block;
+			font-size: 14px;
+			font-weight: normal;
+			padding: 0 0 0 20px;
+			&.mail {
+				@include background(mail, 0);
+				@include sprite-background-position($icons, mail, 0, +4);
+			}
+			&.skype {
+				@include background(skype, 0);
+				@include sprite-background-position($icons, skype, 0, +3);
+			}
+		}
+		@media screen and (max-width:767px) {
+		    float: none;
+		    margin: 15px auto;
+		    text-align: center;
+		    a {
+		    	display: block;
+		    	padding: 0;
+		    	background: none!important;
+		    }
+		}
+		@media screen and (max-width:480px) {
+		    float: none;
+		    margin: 15px auto;
+		    text-align: center;
+		    a {
+		    	display: block;
+		    	padding: 0;
+		    	background: none!important;
+		    }
+		}
+	}
+}
+
+.breadcrumbs {
+	margin: -15px 0 20px 0;
+	a {
+		font-size: 12px;
+		color: #516d72;
+		text-decoration: none;
+		@include background(breadcrumbs, 0);
+		@include sprite-background-position($icons, breadcrumbs, 0, +3);
+		padding: 0 8px 0 10px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	span {
+		@extend a;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.filter {
+	background: #fff;
+	@include border-radius(15px);
+	padding: 10px 34px;
+	@include box-shadow(#eef3f4 0 0 3px);
+	border: 6px solid #fff;
+    box-shadow: 0px 0px 0px 1px #e2edf0 inset;
+    box-sizing: border-box;
+    margin: 0 0 20px 0;
+	.sort {
+		margin: 5px 0 0 0;
+		float: left;
+		font-size: 14px;
+		span {
+			color: #000;
+		}
+		a {
+			position: relative;
+			padding: 0 13px 0 0;
+			margin: 0 10px;
+			&:before {
+				content: "";
+				display: inline-block;
+				@include background(sort, 0);
+				@include sprite-dimensions($icons, sort);
+				@include sprite-background-position($icons, sort, 0, 0);
+				position: absolute;
+				top: 6px;
+				right: 0;
+			}
+			&.active {
+				&:before {
+					content: "";
+					display: inline-block;
+					@include background(sort-active, 0);
+					@include sprite-dimensions($icons, sort-active);
+					@include sprite-background-position($icons, sort-active, 0, 0);
+					position: absolute;
+					top: 6px;
+					right: 0;
+				}
+				color: #ea636a;
+				text-decoration: none;
+			}
+		}
+	}
+	.show {
+		width: 190px;
+		float: right;
+		font-size: 14px;
+		span {
+			display: inline-block;
+			color: #000;
+		}
+		form {
+			display: inline-block;
+			select {
+				border: $border #d9f1f6;
+				border-top: 2px solid #d9f1f6;
+				font-size: 13px;
+				color: #5d8a93;
+				padding: 2px 0;
+			}
+		}
+	}
+}
+
+.article {
+	font-size: 14px;
+	margin: 0 0 20px 0;
+	img {
+		padding: 15px;
+		@include background(article-img, 0);
+		float: left;
+		margin: 0 20px 0 0;
+	}
+	a {
+		display: block;
+		font-size: 23px;
+		margin: 0 0 40px 0;
+		position: relative;
+		top: 25px;
+	}
+	p {
+		color: #000;
+	}
+	.meta {
+		margin: 20px 0 0 0;
+		.date {
+			float: left;
+			color: #ed616c;
+		}
+		.likes-comments {
+			float: right;
+			margin: 0 20px 0 0;
+			.likes {
+				border: $border #dbedf0;
+				@include border-radius(20px);
+				padding: 7px 10px 5px 35px;
+				background: #fff;
+				font-weight: bold;
+				color: #80a2a9;
+				@include background(like, 0);
+				@include sprite-background-position($icons, like, +10, +4);
+			}
+			.comments {
+				@extend .likes;
+			}
+		}
+	}
+}
+center {
+	margin: auto;
+}
+.nav {
+	@include border-radius(20px);
+	background: #fff;
+	a {
+		display: block;
+		float: left;
+		padding: 6px 12px 5px;
+		border: $border #d9f1f6;
+		vertical-align: top;
+		font-size: 21px;
+		text-decoration: none;
+		background: #fff;
+		color: #516d72;
+		&:hover {
+			color: #ed616c;
+			background-color: #fbdfe2;
+		}
+	}
+	span {
+		@extend a;
+		@extend a:hover;
+	}
+	.arr-left {
+		@include background(arr-left, 0);
+		@include sprite-background-position($icons, arr-left, +10, +7);
+		padding: 15px 18px 14px 18px;
+		@include border-bottom-left-radius(20px);
+		@include border-top-left-radius(20px);
+		&:hover {
+			background-color: #fff;
+			@include background(arr-left-an, 0);
+			@include sprite-background-position($icons, arr-left-an, +10, +7);
+		}
+		&.anactive {
+			@extend .arr-left:hover;
+		}
+	}
+	.arr-right {
+		@include background(arr-right, 0);
+		@include sprite-background-position($icons, arr-right, +10, +7);
+		padding: 15px 18px 14px 18px;
+		@include border-bottom-right-radius(20px);
+		@include border-top-right-radius(20px);
+		&:hover {
+			background-color: #fff;
+			@include background(arr-right-an, 0);
+			@include sprite-background-position($icons, arr-right-an, +10, +7);
+		}
+		&.anactive {
+			@extend .arr-right:hover;
+		}
+	}
+}
+
+.master-article {
+	.new {
+		font-size: 14px;
+		p {
+			font-size: 14px;
+			line-height: 20px;
+			margin: 10px 0;
+		}
+		ul {
+			li {
+				@extend p;
+				@include background(ulli, 0);
+				@include sprite-background-position($icons, ulli, 0, +7);
+				padding: 0 0 0 15px;
+			}
+		}
+		> ol {
+			counter-reset: item;
+			> li {
+				@extend p;
+				position: relative;
+				padding: 0 0 0 25px;
+				&:before {
+					position: absolute;
+					content: counter(item) ""; 
+					counter-increment: item;
+					top: 3px;
+					left: 0;
+					font-size: 12px;
+					line-height: 12px;
+					color: #fff;
+					background: #ea636a;
+					padding: 3px 5px;
+					@include border-radius(20px);
+				}
+			}
+		}
+		img {
+			margin: 30px 0;
+		}
+		h2 {
+			@include h2;
+		}
+		h3 {
+			@include h2;
+		}
+		h4 {
+			@include h2;
+		}
+		.read-more {
+			margin: 15px 0;
+			font-weight: bold;
+			a {
+				font-weight: normal;
+			}
+		}
+		.date {
+			font-weight: bold;
+			color: #ea636a;
+			padding: 0 25px 0 0;
+		}
+	}
+	div.like {
+		@extend .filter;
+		margin: 25px 0 0 0;
+		padding: 15px;
+		.likes-block {
+			float: right;
+			.like-btn {
+				font-size: 14px;
+				font-weight: bold;
+				color: #64bc1d;
+				@include background(like-g, 0);
+				padding: 2px 0 3px 25px;
+				text-decoration: none;
+				display: inline;
+			}
+			.dislike {
+				color: #ea636a!important;
+				@include background(like-r, 0);
+				padding: 0 0 6px 25px;
+			}
+			.count {
+				font-size: 14px;
+				color: #80a2a9;
+				font-weight: bold;
+				display: inline;
+				border: $border #dbedf0;
+				padding: 3px 10px;
+				@include border-radius(20px);
+			}
+		}
+	}
+}
+
+.overviews {
+	@extend .new;
+	margin: 50px 0 0 0;
+	img {
+		margin: 0!important;
+	}
+}
+
+.basket-page {
+	@include table;
+    .form {
+    	@include form;
+    }
+}
+
+.card {
+	.preview {
+		width: 513px;
+		float: left;
+		.big {
+			width: auto!important;
+			margin: 0 0 10px 0; 
+			.image {
+				img {
+					width: 500px!important;
+					height: auto;
+				}
+			}
+		}
+		.small {
+			text-align: center;
+			img {
+				margin: 0 0 2px 0;
+			}
+			
+		}
+	}
+	.tovar {
+		width: 412px;
+		float: right;
+		ul li {
+			margin: 0 0 6px 0;
+			font-size: 14px;
+			strong {
+				font-weight: bold;
+			}
+			span {
+				color: #ed616c;
+			}
+		}
+		p {
+			font-size: 14px;
+			line-height: 20px;
+			margin: 15px 0;
+		}
+		h2 {
+			@include h2;
+		}
+		.buy {
+			position: relative;
+			@extend .filter;
+			margin: 15px 0;
+			font-size: 12px;
+			color: #516d72;
+			padding: 10px 0 10px 15px;
+			.old-cost {
+				text-decoration: line-through;
+			}
+			.cost {
+				vertical-align: middle;
+				@include background(cost-big, 0);
+				@include sprite-dimensions($icons, cost-big);
+				font-size: 36px;
+				text-align: center;
+				padding: 30px 0 0 0;
+				height: 43px;
+				display: inline-block;
+				margin: 0 15px 0 0;
+				sup {
+					font-size: 23px;
+					color: #ed616c;
+					vertical-align: top;
+					display: inline-block;
+					margin: -6px 0 0 3px;
+					font-weight: bold;
+				}
+			}
+			input[type=text] {
+				@include input;
+				width: 25px;
+				padding: 3px 0;
+				text-align: center;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			input[type=submit] {
+				display: inline-block;
+				vertical-align: middle;
+				@include submit;
+				margin: 0 0 0 10px;
+				&.lv {
+					font-size: 16px;
+					padding-left: 8px;
+					padding-right: 8px; 
+				}
+			}
+			form {
+				display: inline-block;
+			}
+		}
+		.rating {
+			font-size: 12px;
+			color: #999;
+			margin: 0 0 15px 0;
+			strong {
+				font-weight: bold;
+				font-size: 14px;
+				color: #000;
+				float: left;
+				margin: 0 10px 0 0;
+			}
+			.star-rating {
+				margin: -5px 1px 0 0;
+				@include background(rating-full-big, 0);
+				@include sprite-dimensions($icons, rating-full-big);
+				float: left;
+				a {
+					display: block;
+					text-indent: -9999px;
+					overflow: hidden;
+				}
+				&:last-child {
+					margin: -5px 10px 0 0;
+				}
+			}
+			.star-rating-on {
+				@include background(rating-none-big, 0);
+				cursor: pointer;
+			}
+			.star-rating-hover {
+				@extend .star-rating-on;
+			}
+		}
+		.question {
+			font-size: 14px;
+			margin: 0 0 30px 0;
+			a {
+				padding: 0 0 0 15px;
+			}
+		}
+		.soc {
+			margin: 15px 0 0 0;
+		}
+	}
+	.section {
+		margin: 30px 0 45px;
+		.tabs {
+			background: url(../images/tabs.png) repeat-x center bottom;
+			padding: 0 0 12px 0;
+			li {
+				position: relative;
+				display: inline-block;
+				@include background(tab2, 0);
+				@include sprite-dimensions($icons, tab2);
+				text-align: center;
+				padding: 12px 0 0 0;
+				height: 26px;
+				margin: 0 -25px 0 0;
+				z-index: 0;
+				font-size: 17px;
+				color: #42494b;
+				&.current {
+					@extend li;
+					@include background(tab1, 0);
+					z-index: 1;
+					color: #ed616c;
+				}
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+		.box {
+			margin: 25px 0 0 0;
+			display: none;
+			&.visible {
+				display: block;
+			}
+		}
+	}
+	
+
+}
+
+.dostavka {
+	h2 {
+		font-weight: bold;
+		font-size: 16px!important;
+		color: #000!important;
+		margin: 35px 0 10px 0!important;
+	}
+	em {
+		font-style: italic;
+		font-size: 12px;
+	}
+	strong {
+		font-weight: bold;
+		color: #3b7e6d;
+		span {
+			color: #ea636a;
+		}
+	}
+	table {
+		width: 30%;
+		margin: 10px 0;
+	}
+}
+
+.kontakt {
+	font-size: 14px;
+	h2 {
+		font-size: 18px;
+		margin: 0 0 20px 0;
+	}
+	.adress {
+		padding: 0 0 0 45px;
+		@include background(adress, 0);
+		margin: 0 0 15px 0;
+	}
+	.phone {
+		padding: 10px 0 12px 45px;
+		@include background(phone, 0);
+		font-weight: bold;
+	}
+	.mail {
+		@extend .phone;
+		@include background(email, 0);
+	}
+	.skype {
+		@extend .phone;
+		@include background(skype2, 0);
+	}
+	.form {
+		@include form;
+		.center {
+			background: #fff url(../images/form2.png) no-repeat 630px 55px;
+		}
+	}
+}
+
+.lookout {
+	.detail {
+		@include background(detail, 0);
+		padding: 20px 0 35px 135px;
+		strong {
+			display: block;
+			font-size: 23px;
+			span {
+				font-weight: bold;
+				color: #ee626d;
+			}
+		}
+		span {
+			font-size: 19px;
+			line-height: 24px;
+		}
+	}
+	.detail-pos {
+		padding: 0 0 0 135px;
+		h2 {
+			@include h2;
+			text-transform: uppercase;
+		}
+		ul {
+			margin: 10px 0 35px 0;
+			li {
+				font-size: 16px;
+				font-weight: bold;
+				color: #3d7d6c;
+				margin: 10px 0;
+				span {
+					font-size: 14px;
+					display: inline-block;
+					width: 155px;
+					color: #000;
+					font-weight: normal;
+				}
+			}
+		}
+	}
+	@include table;
+	.table {
+		width: 780px;
+	}
+	.total {
+		text-align: left;
+	}
+}
+
+.p404 {
+	width: 970px;
+	margin: 60px auto 0;
+	.e404 {
+		background: url(../images/404.png) no-repeat left center;
+		padding: 20px 0 0 300px;
+		min-height: 266px;
+		&.lv {
+			background: url(../images/404lv.png) no-repeat left center;
+		}
+		h1 {
+			font-size: 41px;
+			font-weight: bold;
+			margin: 10px 0 25px 0;
+		}
+		h2 {
+			font-size: 18px;
+			line-height: 21px;
+		}
+		h3 {
+			@extend h2;
+		}
+		ul {
+			margin: 5px 0 25px;
+			li {
+				font-size: 14px;
+				@include background(ulli, 0);
+				@include sprite-background-position($icons, ulli, 0, +7);
+				padding: 0 0 0 15px;
+				margin: 10px 0;
+			}
+		}
+	}
+	.master {
+		margin: 30px 0;
+	}
+}
+
+.mask {
+	position: fixed;
+	width: 100%;
+	min-height: 100%;
+	background: url(../images/px.png) repeat;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+.modal {
+	background: #fff;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	@include border-radius(20px);
+	text-align: center;
+	width: 370px;
+	padding: 40px;
+	height: 430px;
+	z-index: 99999;
+	.title {
+		font-size: 27px;
+		color: #000;
+		margin: 0 0 25px 0;
+	}
+	label {
+		text-align: left;
+		display: block;
+		width: 336px;
+		margin: 15px auto;
+		color: #516d72;
+		position: relative;
+		input[type=text] {
+			display: block;
+			@include input;
+			padding: 8px 5px;
+			width: 326px;
+			margin: 5px 0 0 0;
+			text-align: center;
+			font-size: 22px;
+			color: #000;
+		}
+		.errorMessage {
+			@include errorMessage;
+		}
+		.selects {
+			text-align: center;
+			display: block;
+			font-size: 26px;
+			color: #d9f1f6;
+			margin: 5px 0 0 0;
+			select {
+				@include input;
+				padding: 8px 0;
+				text-align: center;
+				font-size: 22px;
+				color: #000;
+				width: 156px;
+				option {
+					text-align: right;
+				}
+			}
+		}
+		&.lang {
+			margin: 30px auto;
+		}
+		.ru {
+			@include background(ru, 0);
+			display: inline-block;
+			padding: 0 0 0 30px;
+			margin: 0 25px 0 0;
+		}
+		.lv {
+			@extend .ru;
+			@include background(lv, 0);
+		}
+	}
+	input[type=submit] {
+		display: block;
+		@include submit;
+		padding: 8px 34px;
+		margin: 25px auto;
+	}
+	.close {
+		display: block;
+		@include background(close, 0);
+		@include sprite-dimensions($icons, close);
+		position: absolute;
+		right: -20px;
+		top: -20px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
