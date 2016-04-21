@@ -334,6 +334,11 @@ input:focus, select:focus, textarea:focus {
   background-position: 0 -8828px;
   padding: 2px 0 0 25px;
 }
+.top .topest .menu .menu-zanyatiya {
+  background-image: url('../images/zanyatiya.png');
+  background-repeat: no-repeat;
+  padding: 2px 0 0 25px;
+}
 @media screen and (max-width: 767px) {
   .top .topest .menu {
     max-width: 767px;
@@ -706,6 +711,7 @@ input:focus, select:focus, textarea:focus {
   text-decoration: none;
   margin: 22px 0 7px 10px;
   text-align: left;
+  max-width: 50%;
 }
 .content .new .block .rating, .content .overviews .block .rating {
   display: inline-block;
@@ -2475,7 +2481,7 @@ center {
 
 .cost-sale sup {
     position: absolute;
-    right: 30px;
+    right: 23px;
     top: 20px;
 }
 
@@ -2485,4 +2491,68 @@ center {
   line-height: 0;
   margin-bottom: 5px;
   text-decoration: line-through;
+}
+
+
+.mail-form {
+  background: url('../images/bg-form.png') no-repeat center center;
+  display: block;
+  width: 707px;
+  height: 164px;
+  position: relative;
+  padding-left: 183px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mail-form:before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: url('../images/bg-logo.png') no-repeat center center;
+  width: 134px;
+  height: 117px;
+}
+
+.mail-form__title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ee676c;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.mail-form__title:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 21px;
+  background: url('../images/dog.png') no-repeat center center;
+  top: 83px;
+  left: 10px;
+}
+
+.mail-form__input {
+  border: 1px solid #d9f1f6;
+  border-top: 2px solid #d9f1f6;
+  width: 371px;
+  height: 41px;
+  padding-left: 35px;
+  box-sizing: border-box;
+}
+
+.mail-form__submit {
+  font-size: 14px;
+  color: #7eaab3;
+  border: 1px solid #d9f1f6;
+  background-color: #f1fafc;
+  width: 101px;
+  height: 40px;
+  box-sizing: border-box;
+  text-align: center;;
 }
