@@ -2537,3 +2537,53 @@ div.scrollableArea {
   -o-user-select: none;
   user-select: none;
 }
+
+.modal-hi {
+  display: block;
+  width: 663px;
+  height: 309px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  margin: auto;
+  background: url(../images/modal-hi.png);
+  box-sizing: border-box;
+  padding-top: 105px;
+  padding-left: 58px;
+}
+
+.modal-hi {
+  font-size: 19px;;
+  color: #2d4747;
+}
+
+.modal-hi__first {
+  margin-top: 15px;
+}
+
+.modal-hi__second {
+  width: 340px;
+  margin: 25px 0;
+}
+
+.modal-hi__third {
+  width: 240px;
+}
+
+.modal-hi .close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: block;
+  width: 43px;
+  height: 43px;
+  background-image: url('../images/icons-sc4b8f14426.png');
+  background-repeat: no-repeat;
+  background-position: 0 -2648px
+}
+.modal-hi .close:hover {
+  cursor: pointer
+}

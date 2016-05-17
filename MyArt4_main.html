@@ -12,11 +12,14 @@
         $(document).ready(function() {
         	$(".mask, .modal").css('display', 'none');
             $(".call").click(function() {
-                $(".mask, .close").click(function() {
-                    $(".mask, .modal").fadeOut('slow');
-                });
+                
                 $(".mask, .modal").fadeIn('slow');
             });
+            $(".mask, .close").click(function() {
+                    $(".mask, .modal, .modal-hi").fadeOut('slow');
+                });
+            // modal-hi
+            $(".mask, .modal-hi").fadeIn('slow');
         });
     </script>
     <script type="text/javascript" src="javascript/jquery-ui-1.8.23.custom.min.js"></script>
@@ -529,6 +532,16 @@
 			</label>
 			<input type="submit" name="" value="Подтвердить">
 		</form>
+	</div>
+
+	<div class="modal-hi active">
+		<span class="close modal-hi-close"></span>
+		
+		<p class="modal-hi__first">Мы ушли на каникулы.</p>
+
+		<p class="modal-hi__second">Заказы оформленные с 16 по 25 мая, будут обработаны 26 мая.</p>
+
+		<p class="modal-hi__third">Приносим свои извинения за неудобства.</p>
 	</div>
 </body>
 </html>
