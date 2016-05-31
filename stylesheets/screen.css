@@ -267,7 +267,7 @@ input:focus, select:focus, textarea:focus {
 }
 .top .topest .menu li, .top .topest .menu .card .section .tabs li.current, .card .section .tabs .top .topest .menu li.current {
   display: inline-block;
-  margin: 0 20px 0 25px;
+  margin: 0 20px 0 15px;
   padding: 2px 0 0 32px
 }
 .top .topest .menu li a, .top .topest .menu .card .section .tabs li.current a, .card .section .tabs .top .topest .menu li.current a, .top .topest .menu li .breadcrumbs span, .breadcrumbs .top .topest .menu li span, .top .topest .menu li .nav span, .nav .top .topest .menu li span {
@@ -355,7 +355,7 @@ input:focus, select:focus, textarea:focus {
 }
 .top .topest .basket {
   float: left;
-  width: 160px;
+  width: 140px;
   margin: 15px 0 0 0
 }
 .top .topest .basket.empty {
